@@ -1,0 +1,32 @@
+package DominioPrivateSeteGet;
+
+public class Pessoa {
+
+	// modificador private significa que acesso é permitido somente dentro da classe onde ele foi declarado.
+	
+	
+	private String nome;
+	private int idade;
+	
+	public void imprime() {
+		System.out.println(this.nome);
+		System.out.println(this.idade);
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setIdade(int idade) {
+		if(idade < 0) {
+			System.out.println("idade invalida");
+			return;
+		}
+		this.idade =idade;
+	}
+	public String getNome(){
+		return this.nome;
+	}
+	public int getIdade(){
+		return this.idade;
+	}
+		
+}
